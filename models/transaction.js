@@ -1,4 +1,3 @@
-const { data } = require("jquery");
 const Sequelize = require("sequelize");
 const database = require("../database/database");
 const Account = require("./account");
