@@ -19,7 +19,7 @@ exports.login = async (req, res, next) => {
       req.session.userId = user.id;
       req.session.user = user;
       req.session.isAuth = true;
-      if (user.id ==2) {
+      if (user.id ==1) {
         req.session.isAdmin = true;
       }
       else {
