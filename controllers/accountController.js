@@ -74,7 +74,7 @@ exports.pay = (req, res) => {
                       params.successMessage =
                         "Sent " +
                         transactionAmount +
-                        " YOMs from" +
+                        " YOMs from " +
                         senderAccount.id +
                         " to " +
                         recepientAccount.id;
@@ -84,7 +84,7 @@ exports.pay = (req, res) => {
                     params.successMessage =
                       "Sent " +
                       transactionAmount +
-                      " YOMs from" +
+                      " YOMs from " +
                       payerAccount.id +
                       " to " +
                       recepientAccount.id;
