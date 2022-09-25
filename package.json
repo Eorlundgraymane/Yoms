@@ -1,0 +1,28 @@
+{
+  "name": "yoms",
+  "version": "1.0.0",
+  "description": "Yoms App",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start-server": "nodemon app.js"
+  },
+  "keywords": [
+    "Yoms"
+  ],
+  "author": "Roshan K Menon",
+  "license": "ISC",
+  "devDependencies": {
+    "bootstrap": "^5.2.1",
+    "jquery": "^3.6.1",
+    "nodemon": "^2.0.20"
+  },
+  "dependencies": {
+    "body-parser": "^1.20.0",
+    "ejs": "^3.1.8",
+    "express": "^4.18.1",
+    "express-session": "^1.17.3",
+    "mysql2": "^2.3.3",
+    "sequelize": "^6.23.1"
+  }
+}

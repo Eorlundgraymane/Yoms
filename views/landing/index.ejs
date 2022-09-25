@@ -1,0 +1,67 @@
+<%- include('../includes/header.ejs') %>
+<div class="row">
+  <div class="col" style="display: flex; justify-content: center">
+    <fieldset>
+      <legend>Login</legend>
+      <form class="form-group" action="/login" method="post">
+        <label class="form-label">Username</label>
+        <input
+          required
+          class="form-control"
+          type="text"
+          name="username"
+          id="loginUsername"
+        />
+        <label class="form-label">Password</label>
+        <input
+          required
+          class="form-control"
+          type="password"
+          name="password"
+          id="loginPassword"
+        />
+        <br />
+        <button class="form-control btn btn-sm btn-light" type="submut">
+          Login
+        </button>
+      </form>
+    </fieldset>
+
+  </div>
+  <div class="col" style="display: flex; justify-content: center">
+    <fieldset>
+      <legend>Sign Up</legend>
+      <form class="form-group" action="/signup" method="post">
+        <label class="form-label">Username</label>
+        <input
+          required
+          class="form-control"
+          type="text"
+          name="username"
+          id="signUpUsername"
+        />
+        <label class="form-label">Password</label>
+        <input
+          required
+          class="form-control"
+          type="password"
+          name="password"
+          id="signUpPassword"
+        />
+        <label class="form-label">Confirm Password</label>
+        <input
+          required
+          class="form-control"
+          type="password"
+          name="confpassword"
+          id="signUpConfPassword"
+        />
+        <br />
+        <button class="form-control btn btn-sm btn-light" type="submit">
+          Sign Up
+        </button>
+      </form>
+    </fieldset>
+  </div>
+</div>
+<%- include('../includes/footer.ejs') %>

@@ -1,0 +1,57 @@
+<%- include('../includes/header.ejs') %>
+<h1>YOMS</h1>
+<div class="row">
+  <div class="col" style="display: flex; justify-content: left">
+    <form action="#" class="form-group">
+      <select
+        class="form-select"
+        id="selectedAccount"
+        onchange="getAccountDetails()"
+        name="accounts"
+      >
+        <option value="0" disabled selected hidden>Select Account</option>
+        <% user.accounts.forEach(account => {%>
+        <option value="<%=account.id%>"><%=account.name%></option>
+        <%})%>
+      </select>
+    </form>
+  </div>
+  <div
+    id="accountDetails"
+    class="col"
+    style="display: none; justify-content: left"
+  >
+    <fieldset>
+      <legend id="accountLegend"></legend>
+      <form action="/pay" method="POST" class="form-group">
+        <label id="accountDetailID" class="form-label"></label>
+        <input type="text" name="senderAccountID" id="senderAccountID" hidden />
+        <br />
+        <label id="accountDetailBalance" class="form-label"></label>
+        <button type="submit" class="btn btn-sm btn-light form-control">
+          Send Yoms
+        </button>
+      </form>
+    </fieldset>
+  </div>
+  <div class="col" style="display: flex; justify-content: right">
+    <fieldset>
+      <legend>Open a New Account</legend>
+      <form action="/openAccount" method="POST">
+        <input
+          class="form-control"
+          type="text"
+          name="accountName"
+          id="newAccountName"
+        />
+        <br />
+        <button type="submit" class="form-control btn btn-sm btn-light">
+          Open Account
+        </button>
+      </form>
+    </fieldset>
+    <br />
+  </div>
+</div>
+
+<%- include('../includes/footer.ejs') %>

@@ -1,0 +1,14 @@
+<div class="row">
+  <div class="col" style="display: flex; justify-content: center;">
+    <% if(typeof successMessage != 'undefined') { %>
+    <label class="form-label" style="color: green"><%=successMessage%></p>
+    <%}%>
+  </div>
+</div>
+<div class="row">
+  <div class="col" style="display: flex; justify-content: center;">
+    <% if(typeof errorMessage != 'undefined') { %>
+    <label class="form-label" style="color: red"><%=errorMessage%></p>
+    <%}%>
+  </div>
+</div>
