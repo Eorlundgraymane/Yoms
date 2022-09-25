@@ -28,7 +28,7 @@ app.use(
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(express.static(path.join(rootDir, "public")));
-
+app.use("/favicon.ico", express.static("images/favicon.ico"));
 app.use(masterRouter);
 
 database.sync().then(
