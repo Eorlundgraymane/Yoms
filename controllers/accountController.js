@@ -50,9 +50,9 @@ exports.pay = (req, res) => {
   let params = {};
   let payeeAccountID = req.body.payeeAccountID;
   let senderAccountID = req.body.senderAccountID;
+  params.senderAccountID = senderAccountID;
   if (payeeAccountID != senderAccountID) {
     let transactionAmount = parseInt(req.body.payAmount);
-    params.senderAccountID = senderAccountID;
     if (payeeAccountID == null) {
       res.render("home/pay.ejs", params);
     } else {
@@ -120,8 +120,7 @@ exports.pay = (req, res) => {
           res.render("home/pay.ejs", params);
         });
     }
-  }
-  else {
+  } else {
     params.errorMessage = "Cannot transfrer to own account";
     res.render("home/pay.ejs", params);
   }
