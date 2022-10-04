@@ -52,7 +52,7 @@ exports.pay = (req, res) => {
   let senderAccountID = req.body.senderAccountID;
   params.senderAccountID = senderAccountID;
   if (payeeAccountID != senderAccountID) {
-    let transactionAmount = parseInt(req.body.payAmount);
+    let transactionAmount = Math.abs(parseInt(req.body.payAmount));
     if (payeeAccountID == null) {
       res.render("home/pay.ejs", params);
     } else {
