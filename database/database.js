@@ -6,12 +6,12 @@ const { Sequelize } = require("sequelize");
 // });
 
 const database = new Sequelize(
-  "rtuah3x8s0df08v4",
-  "m1vbx24mz5q3h2in",
-  "ahrh2yxo8arv441u",
+  "bpwty1l8ms0cedsiuigp",
+  "u8vo4bnhk3m1bs0e",
+  "SFL3b3yoRoGBX5YgSnbz",
   {
     dialect: "mysql",
-    host: "qvti2nukhfiig51b.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+    host: "bpwty1l8ms0cedsiuigp-mysql.services.clever-cloud.com",
     port: 3306,
   }
 );
